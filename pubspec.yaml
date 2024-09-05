@@ -1,6 +1,6 @@
 name: muq_snackbar
 description: "With this pack you can create beautiful and stylish snackbars. It can be used as Toast and Snackbar."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ahmet-ozberk/muq_snackbar
 
 environment:

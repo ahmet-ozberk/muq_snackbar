@@ -11,9 +11,6 @@ part '../../view/_muq_snackbar.dart';
 List<MuqSnackbar> _muqSnackbars = [];
 
 final class MuqSnackbar {
-  /// BuildContext of snackbar
-  final BuildContext context;
-
   /// Duration of snackbar when autoDismiss is true
   final Duration duration;
 
@@ -70,7 +67,6 @@ final class MuqSnackbar {
 
   /// Constructor of MuqSnackbar
   MuqSnackbar({
-    required this.context,
     this.duration = const Duration(seconds: 4),
     this.position = MuqPosition.top,
     this.autoDismiss = true,
@@ -107,6 +103,7 @@ final class MuqSnackbar {
   }
 
   void _show() {
+    final context = WidgetsBinding.instance.focusManager.primaryFocus!.context!;
     OverlayState overlayState = Overlay.of(context);
     info = _SnackBarInfo(
       key: GlobalKey<_MuqSnackbarWidgetState>(),

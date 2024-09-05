@@ -27,7 +27,6 @@ class HomePage extends StatelessWidget {
         child: OutlinedButton(
           onPressed: () {
             MuqSnackbar(
-              context: context,
               title: "MuqSnackbar",
               content: "This is a MuqSnackbar with bottom position",
               leading: const Icon(Icons.info, color: Colors.blue),
