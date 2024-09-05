@@ -1,39 +1,89 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# MuqSnackbar - [![pub package](https://img.shields.io/badge/pub.dev-i)](https://pub.dev/packages/muq_snackbar)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+## Media
+![Simulator Screen Recording - iPhone 11 - 2024-09-05 at 13 21 26](https://github.com/user-attachments/assets/15107d9d-176e-4231-9e90-e94f2656e9f1)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+## How to Use
 ```dart
-const like = 'sample';
+OutlinedButton(
+  onPressed: () {
+    MuqSnackbar(
+      context: context,
+      title: "MuqSnackbar",
+      content: "This is a MuqSnackbar with bottom position",
+      leading: const Icon(Icons.info, color: Colors.blue),
+      position: MuqPosition.bottom,
+      closeBuilder: (context, closeFunction) {
+        return IconButton(
+          onPressed: closeFunction,
+          icon: const Icon(Icons.close),
+        );
+      },
+    );
+  },
+  child: const Text(
+    "Show MuqSnackbar",
+    style: TextStyle(color: Colors.black, fontSize: 18),
+  ),
+),
 ```
 
-## Additional information
+and all parameters
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+/// BuildContext of snackbar
+final BuildContext context;
+
+/// Duration of snackbar when autoDismiss is true
+final Duration duration;
+
+/// Snackbar position on screen
+final MuqPosition position;
+
+/// WidgetBuilder of snackbar
+final WidgetBuilder? builder;
+
+/// Set true to dismiss snackbar automatically
+final bool autoDismiss;
+
+/// Snackbar title widget
+final String? title;
+
+/// Snackbar message widget
+final String? content;
+
+/// Animation duration of snackbar
+final Duration animationDuration;
+
+/// Animation curve of snackbar
+final Curve? animationCurve;
+
+/// BorderRadius of snackbar
+final BorderRadiusGeometry? borderRadius;
+
+/// Background color of snackbar
+final Color? backgroundColor;
+
+/// Border of snackbar
+final BorderSide? border;
+
+/// Leading widget of snackbar
+final Widget? leading;
+
+/// Trailing widget of snackbar
+final Widget? trailing;
+
+/// Card shadow of snackbar
+final List<BoxShadow>? shadows;
+
+/// Card padding of snackbar
+final EdgeInsetsGeometry? padding;
+
+/// Card margin of snackbar
+final EdgeInsetsGeometry? margin;
+
+/// Snackbar's close function returns a widget
+final CloseBuilder? closeBuilder;
+```
+
+
