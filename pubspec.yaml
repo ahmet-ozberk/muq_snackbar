@@ -1,0 +1,20 @@
+name: muq_snackbar
+description: "With this pack you can create beautiful and stylish snackbars. It can be used as Toast and Snackbar."
+version: 0.0.1
+homepage: https://github.com/ahmet-ozberk/muq_snackbar
+
+environment:
+  sdk: ^3.5.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:

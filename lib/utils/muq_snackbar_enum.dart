@@ -1,0 +1,1 @@
+enum MuqPosition { top, bottom }
